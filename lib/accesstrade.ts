@@ -1,4 +1,5 @@
 export async function createAffLink(url: string) {
+
   const key = process.env.ACCESSTRADE_API_KEY;
   if (!key) throw new Error("ACCESSTRADE_API_KEY missing");
   const res = await fetch("https://api.accesstrade.vn/v1/deeplink", {
@@ -17,3 +18,4 @@ export async function createAffLink(url: string) {
   // Expect { data: { short_url: ... } } depending on API; adjust if needed.
   return data.data?.short_url || data.short_url || url;
 }
+export { createAffLink as createAFFLink };
