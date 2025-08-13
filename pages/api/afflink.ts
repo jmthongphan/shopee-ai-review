@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { createAffLink } from '@/lib/accesstrade';
+import { createAFFLink } from '../../lib/accesstrade';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
